@@ -7,10 +7,15 @@ const client = new Client()
 const databases = new Databases(client);
 
 export const submitQuestionnaire = async (data) => {
-    return await databases.createDocument(
-        '69c21463003b58b5b871', 
-        'submissions',         
-        ID.unique(),
-        data
-    );
+    try {
+        return await databases.createDocument(
+            '69c21463003b58b5b871', 
+            'submissions',         
+            ID.unique(),
+            data
+        );
+    } catch (error) {
+        console.error("Appwrite Error:", error); // This tells us EXACTLY why it failed
+        throw error;
+    }
 };
