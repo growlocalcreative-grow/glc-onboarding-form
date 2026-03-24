@@ -18,4 +18,3 @@ export const submitQuestionnaire = async (data) => {
         console.error("Appwrite Error:", error);
         throw error;
     }
-};
