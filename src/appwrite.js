@@ -15,6 +15,7 @@ export const submitQuestionnaire = async (data) => {
             data
         );
     } catch (error) {
-        console.error("Appwrite Error:", error); // This tells us EXACTLY why it failed
+        console.error("Appwrite Error:", error);
         throw error;
     }
+};
