@@ -17,4 +17,5 @@ export const submitQuestionnaire = async (data) => {
     } catch (error) {
         console.error("Appwrite Error:", error);
         throw error;
-    };
+    }
+};
